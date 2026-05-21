@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DT Sustainability Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand-mark" aria-label="Deutsche Telekom">T</div>
+      <div>
+        <p class="eyebrow">Deutsche Telekom - Sustainability Intelligence Hub</p>
+        <h1>Landing Page Rapports CSR / CR</h1>
+      </div>
+    </div>
+    <p class="hero-sub">
+      Vue consolidee des chiffres, graphes emissions, SDGs/ODD et projets avec dates, descriptions et KPIs.
+    </p>
+    <div class="hero-tags">
+      <span>Brand color: Telekom Magenta</span>
+      <span>Perimetre: 2009-2025</span>
+      <span>Derniere maj: 2025 CR</span>
+    </div>
+    <section class="hero-video" aria-label="Video intro Scale to Sustainability">
+      <video controls preload="metadata" poster="" playsinline>
+        <source src="../DT__Scale_to_Sustainability.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge la lecture video HTML5.
+      </video>
+      <p class="video-note">
+        Intro video: DT Scale to Sustainability.
+        <a href="../DT__Scale_to_Sustainability.mp4" download>Télécharger la vidéo</a>
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="kpi-grid" id="kpi-grid"></section>
+
+    <section class="panel">
+      <h2>Fiche Entreprise (detaillee)</h2>
+      <div class="company-grid" id="company-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Emissions - Graphes</h2>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Scope 1 vs Scope 2 (market-based)</h3>
+          <canvas id="chartScopeMarket" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Scope 2 (location-based)</h3>
+          <canvas id="chartScopeLocation" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Evolution indexee (base 2020 = 100)</h3>
+          <canvas id="chartIndexed" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Intensite SDG dans les rapports (proxy textuel)</h3>
+          <canvas id="chartSdgMentions" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Waterfall reduction carbone (2020 vers 2025)</h3>
+          <canvas id="chartWaterfall" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Radar materialite ESG (impact x finance)</h3>
+          <canvas id="chartRadar" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Progression vers cibles 2030</h3>
+          <canvas id="chartTargets" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Repartition des projets par ODD</h3>
+          <canvas id="chartOddMix" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Variations annuelles YoY (Scopes)</h3>
+          <canvas id="chartYoY" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Intensite carbone (tCO2e / million EUR)</h3>
+          <canvas id="chartCarbonIntensity" width="780" height="360"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Evolution Chiffree Avancee</h2>
+      <div class="numbers-grid" id="numbersGrid"></div>
+      <div class="table-wrap">
+        <table id="evolutionTable">
+          <thead>
+            <tr>
+              <th>Annee</th>
+              <th>Scope 1</th>
+              <th>YoY S1</th>
+              <th>Scope 2 MB</th>
+              <th>YoY S2 MB</th>
+              <th>Scope 2 LB</th>
+              <th>YoY S2 LB</th>
+              <th>S1+S2 MB</th>
+              <th>YoY S1+S2 MB</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Tableau annuel Scopes (2009-2025)</h2>
+      <div class="table-wrap">
+        <table id="scopeTable">
+          <thead>
+            <tr>
+              <th>Annee</th>
+              <th>Scope 1 (tCO2e)</th>
+              <th>Scope 2 market-based (tCO2e)</th>
+              <th>Scope 2 location-based (tCO2e)</th>
+              <th>Scope 3</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Telechargement des Rapports (2008-2025)</h2>
+      <div id="reportDownloads" class="downloads-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>Projets par ODD (SDG)</h2>
+        <div class="filters">
+          <label>
+            ODD
+            <select id="filterSdg">
+              <option value="all">Tous</option>
+            </select>
+          </label>
+          <label>
+            Date
+            <select id="filterYear">
+              <option value="all">Toutes</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="projectList" class="project-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dashboard genere localement pour analyse EMBA - Sustainability Strategy.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
