@@ -158,6 +158,22 @@ main {
   font-size: 1.12rem;
 }
 
+.section-intro {
+  margin-top: 0;
+  color: var(--dt-gray-600);
+  max-width: 920px;
+}
+
+.section-table-gap {
+  margin-top: 0.85rem;
+}
+
+.section-note {
+  margin: 0.8rem 0 0;
+  color: var(--dt-gray-600);
+  font-size: 0.84rem;
+}
+
 .company-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -189,6 +205,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+.roadmap-grid {
+  grid-template-columns: 1fr;
 }
 
 .chart-card {
@@ -391,6 +411,10 @@ footer {
 @media (min-width: 900px) {
   .chart-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
   }
 }
 

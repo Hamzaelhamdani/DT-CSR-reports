@@ -1,23 +1,23 @@
 const companyProfile = [
-  { k: "Siege", v: "Bonn, Allemagne" },
-  { k: "Annee de creation", v: "1995" },
-  { k: "Societes consolidees", v: "326" },
+  { k: "Headquarters", v: "Bonn, Germany" },
+  { k: "Year founded", v: "1995" },
+  { k: "Consolidated companies", v: "326" },
   { k: "Segments", v: "Germany, USA, Europe, Systems Solutions" },
-  { k: "Connexions totales", v: "298 millions" },
-  { k: "Trafic reseau", v: "245,000 PB" },
-  { k: "Employes (2025)", v: "~199,000" },
-  { k: "Mix workforce (2021)", v: "~61% international / 39% domestique" },
-  { k: "Periode rapports", v: "2009-2025" },
-  { k: "Objectif climat", v: "-55% Scopes 1-3 d'ici 2030 (vs 2020)" },
+  { k: "Total connections", v: "298 million" },
+  { k: "Network traffic", v: "245,000 PB" },
+  { k: "Employees (2025)", v: "~199,000" },
+  { k: "Workforce mix (2021)", v: "~61% international / 39% domestic" },
+  { k: "Report period", v: "2009-2025" },
+  { k: "Climate target", v: "-55% Scopes 1-3 by 2030 (vs 2020)" },
 ];
 
 const kpiCards = [
   { label: "Scope 1 (2025)", value: "223,790 tCO2e" },
   { label: "Scope 2 MB (2025)", value: "16,375 tCO2e" },
   { label: "Scope 2 LB (2025)", value: "3,736,800 tCO2e" },
-  { label: "Scope 3 (2025 est.)", value: "8,509 ktCO2e" },
-  { label: "Net zero operations", value: "Atteint en 2025" },
-  { label: "Digital society reach", value: "40M personnes (2025)" },
+  { label: "Scope 3 (2025 estimate)", value: "8,507 ktCO2e" },
+  { label: "Net zero operations", value: "Achieved in 2025" },
+  { label: "Digital society reach", value: "40M people (2025)" },
 ];
 
 const emissions = {
@@ -62,24 +62,133 @@ const analysisExtras = {
   ],
 };
 
+const roadmapMilestones = [
+  {
+    year: 1996,
+    title: "First sustainability activities report",
+  },
+  {
+    year: 2000,
+    title: "Founding member of the UN Global Compact",
+  },
+  {
+    year: 2008,
+    title: "First official CR strategy and program adopted",
+  },
+  {
+    year: 2021,
+    title: "100% renewable electricity reached across the Group",
+  },
+  {
+    year: 2024,
+    title: "First report fully aligned with ESRS standards",
+  },
+  {
+    year: 2025,
+    title: "Operational net zero (Scopes 1 and 2) and TCS introduced",
+  },
+  {
+    year: 2030,
+    title: "Fully circular economy target for network technology and devices in Europe",
+  },
+  {
+    year: 2040,
+    title: "Full net zero across the value chain (Scope 3)",
+  },
+];
+
+const cr2025 = {
+  scope1T: 223790,
+  scope2MarketT: 16375,
+  scope12T: 240165,
+  scope2LocationT: 3736800,
+  scope3Kt: 8507,
+  totalResidualKt: 8747,
+  savingsAchievedPct: {
+    scope1: 14.0,
+    scope2: 99.2,
+    scope3: 26.6,
+  },
+};
+
+const cr2025Scope3Parts = [
+  {
+    label: "Purchased goods and services",
+    pct: 39.4,
+    note: "Devices and network equipment",
+  },
+  {
+    label: "Capital goods",
+    pct: 20.5,
+    note: "Assets and infrastructure",
+  },
+  {
+    label: "Upstream logistics",
+    pct: 7.7,
+    note: "Upstream transport and distribution",
+  },
+  {
+    label: "Use of sold products",
+    pct: 13.0,
+    note: "Energy consumed at customer side",
+  },
+  {
+    label: "Use of leased products",
+    pct: 7.8,
+    note: "Leased products in operation",
+  },
+  {
+    label: "Other Scope 3 categories",
+    pct: 11.6,
+    note: "Remaining GHG Protocol categories",
+  },
+];
+
+const cr2025Fields = [
+  {
+    name: "Germany",
+    scope12T: 85000,
+    scope3T: 2100000,
+    profile: "High upstream Scope 3 share",
+  },
+  {
+    name: "United States (TMUS)",
+    scope12T: 46000,
+    scope3T: 6300000,
+    profile: "Largest Scope 3 contributor",
+  },
+  {
+    name: "Europe",
+    scope12T: 49000,
+    scope3T: 1600000,
+    profile: "Focus on device reduction",
+  },
+  {
+    name: "Systems Solutions",
+    scope12T: 8000,
+    scope3T: 300000,
+    profile: "Emissions linked to data centers",
+  },
+];
+
 const scopeTimeline = [
-  [2009, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2010, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2011, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2012, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2013, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2014, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2015, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2016, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2017, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2018, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2019, "NA", "NA", "NA", "NA", "Refs Scope presentes, table non exploitable automatiquement"],
-  [2020, "NA", "NA", "NA", "11,595 kt", "Baseline Scope 3 issue du transition plan"],
-  [2021, "218,971", "27,290", "4,634,657", "NA", "Table historique CR recente"],
-  [2022, "212,044", "21,019", "4,232,913", "NA", "Table historique CR recente"],
-  [2023, "239,602", "17,957", "3,979,565", "10,693 kt (total emissions)", "Valeur issue CR2023 (total emissions)"],
-  [2024, "236,355", "16,212", "4,002,218", "10,354 kt (est.)", "Calcul via reduction 10.7% vs baseline"],
-  [2025, "223,790", "16,375", "3,736,800", "8,509 kt (est.)", "Calcul via reduction 26.6% vs baseline"],
+  [2009, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2010, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2011, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2012, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2013, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2014, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2015, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2016, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2017, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2018, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2019, "NA", "NA", "NA", "NA", "Scope references present, table not robustly extractable"],
+  [2020, "NA", "NA", "NA", "11,595 kt", "Scope 3 baseline from transition plan"],
+  [2021, "218,971", "27,290", "4,634,657", "NA", "Recent CR historical table"],
+  [2022, "212,044", "21,019", "4,232,913", "NA", "Recent CR historical table"],
+  [2023, "239,602", "17,957", "3,979,565", "10,693 kt (total emissions)", "Value from CR2023 (total emissions)"],
+  [2024, "236,355", "16,212", "4,002,218", "10,354 kt (estimate)", "Calculated using 10.7% reduction vs baseline"],
+  [2025, "223,790", "16,375", "3,736,800", "8,507 kt (published)", "Published value in CR2025 expected savings"],
 ];
 
 const reports = [
@@ -106,107 +215,107 @@ const reports = [
 const projects = [
   {
     sdg: "2",
-    odd: "ODD 2 - Zero Hunger",
+    odd: "SDG 2 - Zero Hunger",
     title: "5G Precision Agriculture",
     date: "2022",
-    description: "Solution temps reel pour corriger la precision GPS en agriculture et optimiser semences/fertilisants.",
-    kpi: "Reduction emissions et gains de rendement (contribution indirecte SDG2)",
+    description: "Real-time solution to improve GPS precision in agriculture and optimize seed/fertilizer use.",
+    kpi: "Emissions reduction and yield gains (indirect SDG 2 contribution)",
   },
   {
     sdg: "7",
-    odd: "ODD 7 - Clean Energy",
-    title: "100% Electricite renouvelable",
+    odd: "SDG 7 - Clean Energy",
+    title: "100% Renewable Electricity",
     date: "2021",
-    description: "Sourcing group-wide de 100% d'electricite renouvelable.",
-    kpi: "Scope 2 market-based tres faible maintenu 2021-2025",
+    description: "Group-wide sourcing of 100% renewable electricity.",
+    kpi: "Very low market-based Scope 2 maintained from 2021 to 2025",
   },
   {
     sdg: "9",
-    odd: "ODD 9 - Industry/Innovation",
+    odd: "SDG 9 - Industry/Innovation",
     title: "Device as a Service (everphone)",
     date: "2022",
-    description: "Gestion circulaire des smartphones/tablettes entreprise sur tout le cycle de vie.",
-    kpi: "~50 kgCO2e evites par device; refurbishment >97%",
+    description: "Circular management of enterprise smartphones/tablets across the full life cycle.",
+    kpi: "~50 kgCO2e avoided per device; refurbishment >97%",
   },
   {
     sdg: "11",
-    odd: "ODD 11 - Sustainable Cities",
+    odd: "SDG 11 - Sustainable Cities",
     title: "AR FieldAdvisor",
     date: "2022",
-    description: "Maintenance distante via realite augmentee pour eviter les deplacements techniques.",
-    kpi: "~614 kgCO2e evites / 100 interventions",
+    description: "Remote maintenance through augmented reality to avoid technical travel.",
+    kpi: "~614 kgCO2e avoided / 100 interventions",
   },
   {
     sdg: "11",
-    odd: "ODD 11 - Sustainable Cities",
+    odd: "SDG 11 - Sustainable Cities",
     title: "Mein Telekom Techniker",
     date: "2022",
-    description: "App de suivi technicien pour reduire les visites a vide et la logistique inutile.",
-    kpi: "~14 kgCO2e evites par intervention (ordre de grandeur rapporte)",
+    description: "Technician tracking app to reduce failed visits and unnecessary logistics.",
+    kpi: "~14 kgCO2e avoided per intervention (reported order of magnitude)",
   },
   {
     sdg: "11",
-    odd: "ODD 11 - Sustainable Cities",
+    odd: "SDG 11 - Sustainable Cities",
     title: "Airport CDM (T-Systems)",
     date: "2022",
-    description: "Optimisation collaborative des operations aeroportuaires pour reduire retards et fuel burn.",
-    kpi: "Jusqu'a 92 kgCO2 evites par decollage",
+    description: "Collaborative optimization of airport operations to reduce delays and fuel burn.",
+    kpi: "Up to 92 kgCO2 avoided per takeoff",
   },
   {
     sdg: "12",
-    odd: "ODD 12 - Responsible Consumption",
+    odd: "SDG 12 - Responsible Consumption",
     title: "EcoShift mobility platform",
     date: "2022",
-    description: "Dashboard carbone mobilite employes (deplacements + trajets domicile-travail).",
-    kpi: "~12 tCO2/an economisees pour 100 employes",
+    description: "Employee mobility carbon dashboard (business travel + commuting).",
+    kpi: "~12 tCO2/year saved per 100 employees",
   },
   {
     sdg: "4",
-    odd: "ODD 4 - Quality Education",
+    odd: "SDG 4 - Quality Education",
     title: "AwareNessi Cyber Activity",
     date: "2022",
-    description: "Magazine pedagogique cybersecurite pour enfants et parents, multi-langues.",
-    kpi: "16 langues; 60h volontariat employes par numero",
+    description: "Educational cybersecurity magazine for children and parents, multilingual.",
+    kpi: "16 languages; 60h employee volunteering per issue",
   },
   {
     sdg: "4",
-    odd: "ODD 4 - Quality Education",
+    odd: "SDG 4 - Quality Education",
     title: "Teachtoday",
     date: "2022",
-    description: "Programme de media literacy avec methodes multimedia.",
-    kpi: ">2x plus efficace que methodes conventionnelles (etude PwC)",
+    description: "Media literacy program using multimedia learning methods.",
+    kpi: ">2x more effective than conventional methods (PwC study)",
   },
   {
     sdg: "16",
-    odd: "ODD 16 - Institutions",
+    odd: "SDG 16 - Institutions",
     title: "Human Rights Impact Assessments",
     date: "2022",
-    description: "Evaluations sur sites (Slovaquie, Tchequie, Roumanie) et mesures de remediation.",
-    kpi: "Processus RHIA et ateliers de sensibilisation deployes",
+    description: "On-site assessments (Slovakia, Czechia, Romania) and remediation measures.",
+    kpi: "RHIA process and awareness workshops deployed",
   },
   {
     sdg: "13",
-    odd: "ODD 13 - Climate Action",
+    odd: "SDG 13 - Climate Action",
     title: "Net zero own operations",
     date: "2025",
-    description: "Atteinte du net zero Scope 1+2 avec reduction profonde + neutralisation residuelle.",
-    kpi: ">94% reduction vs 2017; 250,000 tCO2e neutralisees en 2025",
+    description: "Net zero achieved for Scope 1+2 through deep reduction and residual neutralization.",
+    kpi: ">94% reduction vs 2017; 250,000 tCO2e neutralized in 2025",
   },
   {
     sdg: "15",
-    odd: "ODD 15 - Life on Land",
+    odd: "SDG 15 - Life on Land",
     title: "Removal projects",
     date: "2025",
-    description: "Neutralisation via projets de retrait carbone, incluant reforestation et puits technologiques.",
-    kpi: "243,000 tCO2e de projets removal en 2025",
+    description: "Neutralization via carbon removal projects, including reforestation and technology-based sinks.",
+    kpi: "243,000 tCO2e from removal projects in 2025",
   },
   {
     sdg: "11",
-    odd: "ODD 11 - Sustainable Communities",
+    odd: "SDG 11 - Sustainable Communities",
     title: "Digital society reach",
     date: "2025",
-    description: "Programmes de societe numerique inclusive a grande echelle.",
-    kpi: "40M personnes touchees en 2025; 77M cumulees (2024-2025)",
+    description: "Large-scale inclusive digital society programs.",
+    kpi: "40M people reached in 2025; 77M cumulative (2024-2025)",
   },
 ];
 
@@ -281,7 +390,7 @@ function renderAdvancedNumbers() {
       value: `${((s1[s1.length - 1] / combined[combined.length - 1]) * 100).toFixed(1)}%`,
     },
     {
-      label: "Delta absolu S1+S2 MB (2021->2025)",
+      label: "Absolute delta S1+S2 MB (2021->2025)",
       value: `${formatK(combined[combined.length - 1] - combined[0])} tCO2e`,
     },
     {
@@ -346,15 +455,48 @@ function initDownloads() {
     const card = document.createElement("article");
     card.className = "download-card";
     card.innerHTML = `
-      <p class="year">Rapport ${r.year}</p>
-      <a href="${r.file}" download>Télécharger PDF</a>
+      <p class="year">Report ${r.year}</p>
+      <a href="${r.file}" download>Download PDF</a>
     `;
     wrap.appendChild(card);
   });
 }
 
 function formatK(n) {
-  return new Intl.NumberFormat("fr-FR").format(n);
+  return new Intl.NumberFormat("en-US").format(n);
+}
+
+function formatPct(v, digits = 2) {
+  return `${v.toFixed(digits)}%`;
+}
+
+function setCanvasColumnAttributes(canvasId, columns, chartLabel = "Chart") {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+
+  const attrsToRemove = [];
+  for (let i = 0; i < canvas.attributes.length; i++) {
+    const attrName = canvas.attributes[i].name;
+    if (attrName.startsWith("data-col-")) attrsToRemove.push(attrName);
+  }
+  attrsToRemove.forEach((name) => canvas.removeAttribute(name));
+
+  canvas.setAttribute("role", "img");
+  canvas.setAttribute("data-columns-count", String(columns.length));
+
+  const ariaParts = [];
+  columns.forEach((col, idx) => {
+    const n = idx + 1;
+    const label = String(col.label ?? "");
+    const value = String(col.value ?? "");
+    const description = String(col.description ?? "");
+    canvas.setAttribute(`data-col-${n}-label`, label);
+    canvas.setAttribute(`data-col-${n}-value`, value);
+    canvas.setAttribute(`data-col-${n}-description`, description);
+    ariaParts.push(`${label}: ${value}${description ? ` (${description})` : ""}`);
+  });
+
+  canvas.setAttribute("aria-label", `${chartLabel}. ${ariaParts.join("; ")}`);
 }
 
 function drawAxes(ctx, w, h, left, top, right, bottom) {
@@ -445,7 +587,7 @@ function drawBarChart(canvasId, labels, values, color) {
   const h = c.height;
   ctx.clearRect(0, 0, w, h);
 
-  const m = { left: 60, right: 24, top: 20, bottom: 58 };
+  const m = { left: 60, right: 24, top: 20, bottom: 70 };
   const max = Math.max(...values) * 1.12;
   drawAxes(ctx, w, h, m.left, m.top, m.right, m.bottom);
 
@@ -459,11 +601,18 @@ function drawBarChart(canvasId, labels, values, color) {
     const y = h - m.bottom - bh;
     ctx.fillStyle = color;
     ctx.fillRect(x, y, bw, bh);
-    if (i % 2 === 0) {
-      ctx.fillStyle = "#5c6770";
-      ctx.font = "10px Segoe UI";
-      ctx.fillText(String(labels[i]), x - 3, h - 35);
-    }
+
+    ctx.fillStyle = "#5c6770";
+    ctx.font = "10px Segoe UI";
+    ctx.save();
+    ctx.translate(x + bw / 2, h - 34);
+    ctx.rotate(-0.35);
+    ctx.fillText(String(labels[i]), -30, 0);
+    ctx.restore();
+
+    ctx.fillStyle = "#111";
+    ctx.font = "10px Segoe UI";
+    ctx.fillText(formatK(Math.round(v)), x - 2, Math.max(14, y - 6));
   });
 
   for (let i = 0; i < 5; i++) {
@@ -478,6 +627,78 @@ function drawBarChart(canvasId, labels, values, color) {
     ctx.font = "11px Segoe UI";
     ctx.fillText(formatK(Math.round(yv)), 8, y + 4);
   }
+
+  setCanvasColumnAttributes(
+    canvasId,
+    labels.map((label, i) => ({
+      label,
+      value: formatK(Math.round(values[i])),
+      description: "Bar column",
+    })),
+    "Bar chart",
+  );
+}
+
+function drawDonutChart(canvasId, labels, values, colors) {
+  const c = document.getElementById(canvasId);
+  const ctx = c.getContext("2d");
+  const w = c.width;
+  const h = c.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const total = values.reduce((a, b) => a + b, 0);
+  const cx = 200;
+  const cy = h / 2;
+  const rOuter = 112;
+  const rInner = 58;
+
+  let angle = -Math.PI / 2;
+  values.forEach((v, i) => {
+    const slice = (v / total) * Math.PI * 2;
+    const next = angle + slice;
+
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, rOuter, angle, next);
+    ctx.closePath();
+    ctx.fillStyle = colors[i % colors.length];
+    ctx.fill();
+
+    angle = next;
+  });
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, rInner, 0, Math.PI * 2);
+  ctx.fillStyle = "#fff";
+  ctx.fill();
+
+  ctx.fillStyle = "#111";
+  ctx.font = "700 14px Segoe UI";
+  ctx.fillText("Total", cx - 18, cy - 6);
+  ctx.font = "700 16px Segoe UI";
+  ctx.fillText(formatK(Math.round(total)), cx - 44, cy + 16);
+
+  labels.forEach((label, i) => {
+    const y = 46 + i * 42;
+    const pct = (values[i] / total) * 100;
+    ctx.fillStyle = colors[i % colors.length];
+    ctx.fillRect(420, y - 10, 12, 12);
+    ctx.fillStyle = "#111";
+    ctx.font = "12px Segoe UI";
+    ctx.fillText(label, 438, y);
+    ctx.fillStyle = "#5c6770";
+    ctx.fillText(`${formatK(Math.round(values[i]))} (${formatPct(pct, 2)})`, 438, y + 15);
+  });
+
+  setCanvasColumnAttributes(
+    canvasId,
+    labels.map((label, i) => ({
+      label,
+      value: `${formatK(Math.round(values[i]))} (${formatPct((values[i] / total) * 100, 2)})`,
+      description: "Donut slice",
+    })),
+    "Donut chart",
+  );
 }
 
 function drawWaterfallChart(canvasId, labels, values) {
@@ -559,6 +780,189 @@ function drawWaterfallChart(canvasId, labels, values) {
     ctx.fillStyle = "#5c6770";
     ctx.fillText(formatK(Math.round(val)), 10, y + 4);
   }
+
+  setCanvasColumnAttributes(
+    canvasId,
+    labels.map((label, i) => ({
+      label,
+      value: formatK(Math.round(values[i])),
+      description: i === 0 || i === values.length - 1 ? "Absolute value" : "Delta value",
+    })),
+    "Waterfall chart",
+  );
+}
+
+function drawRoadmapChart(canvasId, items) {
+  const c = document.getElementById(canvasId);
+  const ctx = c.getContext("2d");
+  const w = c.width;
+  const h = c.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const m = { left: 64, right: 42, top: 40, bottom: 48 };
+  const minYear = Math.min(...items.map((d) => d.year));
+  const maxYear = Math.max(...items.map((d) => d.year));
+  const axisY = Math.round(h * 0.53);
+  const span = w - m.left - m.right;
+  const boxW = 168;
+  const boxH = 72;
+  const boxGap = 10;
+
+  function xScale(year) {
+    return m.left + ((year - minYear) / (maxYear - minYear || 1)) * span;
+  }
+
+  function drawWrappedText(text, x, y, maxWidth, lineHeight, maxLines = 3) {
+    const words = text.split(" ");
+    let line = "";
+    const lines = [];
+    words.forEach((word) => {
+      const testLine = line ? `${line} ${word}` : word;
+      if (ctx.measureText(testLine).width > maxWidth && line) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = testLine;
+      }
+    });
+    if (line) lines.push(line);
+    const renderLines = lines.slice(0, maxLines);
+    if (lines.length > maxLines) {
+      renderLines[maxLines - 1] = `${renderLines[maxLines - 1]}...`;
+    }
+    renderLines.forEach((l, i) => {
+      ctx.fillText(l, x, y + i * lineHeight);
+    });
+  }
+
+  function drawRoundedRect(x, y, width, height, radius) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+    ctx.lineTo(x + width, y + height - radius);
+    ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+    ctx.lineTo(x + radius, y + height);
+    ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.closePath();
+  }
+
+  function placeWithoutOverlap(sideItems, minX, maxX) {
+    const sorted = [...sideItems].sort((a, b) => a.x - b.x);
+    const positioned = [];
+
+    sorted.forEach((item, idx) => {
+      let left = Math.max(minX, Math.min(maxX - boxW, item.x - boxW / 2));
+      if (idx > 0) {
+        const prev = positioned[idx - 1];
+        left = Math.max(left, prev.left + boxW + boxGap);
+      }
+      positioned.push({ ...item, left });
+    });
+
+    const overflow = positioned.length
+      ? Math.max(0, positioned[positioned.length - 1].left + boxW - maxX)
+      : 0;
+
+    if (overflow > 0) {
+      positioned.forEach((p) => {
+        p.left -= overflow;
+      });
+
+      const underflow = Math.max(0, minX - Math.min(...positioned.map((p) => p.left)));
+      if (underflow > 0) {
+        positioned.forEach((p) => {
+          p.left += underflow;
+        });
+      }
+    }
+
+    return positioned;
+  }
+
+  const prepared = items.map((item, i) => ({
+    ...item,
+    x: xScale(item.year),
+    side: i % 2 === 0 ? "top" : "bottom",
+    isHistory: item.year <= 2025,
+  }));
+
+  const topItems = prepared.filter((d) => d.side === "top");
+  const bottomItems = prepared.filter((d) => d.side === "bottom");
+
+  const topPlaced = placeWithoutOverlap(topItems, m.left, w - m.right);
+  const bottomPlaced = placeWithoutOverlap(bottomItems, m.left, w - m.right);
+
+  const placedByYear = new Map([...topPlaced, ...bottomPlaced].map((d) => [d.year, d]));
+
+  ctx.strokeStyle = "#adb5bd";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(m.left, axisY);
+  ctx.lineTo(w - m.right, axisY);
+  ctx.stroke();
+
+  ctx.fillStyle = "#5c6770";
+  ctx.font = "11px Segoe UI";
+  ctx.fillText(String(minYear), m.left - 18, axisY + 28);
+  ctx.fillText(String(maxYear), w - m.right - 14, axisY + 28);
+
+  prepared.forEach((item) => {
+    const placed = placedByYear.get(item.year);
+    const boxY = item.side === "top" ? m.top + 6 : axisY + 48;
+    const anchorY = item.side === "top" ? boxY + boxH : boxY;
+    const anchorX = placed.left + boxW / 2;
+
+    ctx.strokeStyle = "rgba(17,17,17,0.35)";
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(item.x, axisY);
+    ctx.lineTo(anchorX, anchorY);
+    ctx.stroke();
+
+    ctx.fillStyle = item.isHistory ? "#e20074" : "#1971c2";
+    ctx.beginPath();
+    ctx.arc(item.x, axisY, 5.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = "#ffffff";
+    ctx.strokeStyle = "#d0d6dc";
+    ctx.lineWidth = 1;
+    drawRoundedRect(placed.left, boxY, boxW, boxH, 8);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "#111";
+    ctx.font = "700 12px Segoe UI";
+    ctx.fillText(String(item.year), placed.left + 10, boxY + 18);
+
+    ctx.fillStyle = "#495057";
+    ctx.font = "11px Segoe UI";
+    drawWrappedText(item.title, placed.left + 10, boxY + 34, boxW - 20, 12, 3);
+
+  });
+
+  ctx.fillStyle = "#e20074";
+  ctx.fillRect(m.left, 18, 12, 12);
+  ctx.fillStyle = "#111";
+  ctx.font = "12px Segoe UI";
+  ctx.fillText("Historical milestones", m.left + 18, 28);
+  ctx.fillStyle = "#1971c2";
+  ctx.fillRect(m.left + 174, 18, 12, 12);
+  ctx.fillStyle = "#111";
+  ctx.fillText("Future targets", m.left + 192, 28);
+
+  setCanvasColumnAttributes(
+    canvasId,
+    items.map((item) => ({
+      label: String(item.year),
+      value: item.title,
+      description: "Roadmap milestone",
+    })),
+    "Roadmap timeline chart",
+  );
 }
 
 function drawRadarChart(canvasId, axes, seriesA, seriesB) {
@@ -690,7 +1094,7 @@ function drawOddMixChart(canvasId, data) {
     .map(([sdg, n]) => ({ sdg, n }))
     .sort((a, b) => Number(a.sdg) - Number(b.sdg));
 
-  const labels = entries.map((e) => `ODD ${e.sdg}`);
+  const labels = entries.map((e) => `SDG ${e.sdg}`);
   const values = entries.map((e) => e.n);
 
   drawBarChart(canvasId, labels, values, "#495057");
@@ -731,7 +1135,185 @@ function drawCarbonIntensityChart(canvasId) {
   );
 }
 
+function drawCr2025OpsChart(canvasId) {
+  drawBarChart(
+    canvasId,
+    ["Scope 1", "Scope 2 MB", "Scope 1+2 total"],
+    [cr2025.scope1T, cr2025.scope2MarketT, cr2025.scope12T],
+    "#e20074",
+  );
+}
+
+function drawCr2025ResidualChart(canvasId) {
+  drawBarChart(
+    canvasId,
+    ["Scope 3", "Scope 1+2", "Total residual"],
+    [cr2025.scope3Kt, cr2025.scope12T / 1000, cr2025.totalResidualKt],
+    "#0b7285",
+  );
+}
+
+function drawCr2025SavingsChart(canvasId) {
+  drawBarChart(
+    canvasId,
+    ["Scope 1", "Scope 2", "Scope 3"],
+    [
+      cr2025.savingsAchievedPct.scope1,
+      cr2025.savingsAchievedPct.scope2,
+      cr2025.savingsAchievedPct.scope3,
+    ],
+    "#2b8a3e",
+  );
+}
+
+function drawCr2025ScopeShareChart(canvasId) {
+  drawDonutChart(
+    canvasId,
+    ["Scope 1", "Scope 2 (market-based)", "Scope 3"],
+    [cr2025.scope1T, cr2025.scope2MarketT, cr2025.scope3Kt * 1000],
+    ["#e20074", "#2b8a3e", "#0b7285"],
+  );
+}
+
+function drawCr2025OpsShareChart(canvasId) {
+  drawDonutChart(
+    canvasId,
+    ["Scope 1", "Scope 2 (market-based)"],
+    [cr2025.scope1T, cr2025.scope2MarketT],
+    ["#e20074", "#2b8a3e"],
+  );
+}
+
+function drawCr2025Scope3PartsChart(canvasId) {
+  drawBarChart(
+    canvasId,
+    ["Goods&Services", "Capital goods", "Upstream log.", "Use sold", "Use leased", "Other"],
+    cr2025Scope3Parts.map((p) => Math.round((p.pct / 100) * cr2025.scope3Kt * 1000)),
+    "#1971c2",
+  );
+}
+
+function drawCr2025FieldsChart(canvasId, key, color) {
+  drawBarChart(
+    canvasId,
+    cr2025Fields.map((f) => f.name),
+    cr2025Fields.map((f) => f[key]),
+    color,
+  );
+}
+
+function renderCr2025BreakdownTables() {
+  const totalGrossT = cr2025.scope1T + cr2025.scope2MarketT + cr2025.scope3Kt * 1000;
+
+  const globalRows = [
+    {
+      metric: "Scope 1 (direct)",
+      value: cr2025.scope1T,
+      pct: (cr2025.scope1T / totalGrossT) * 100,
+      unit: "tCO2e",
+      note: "Fossil fuels (fleet, heating)",
+    },
+    {
+      metric: "Scope 2 (indirect - energy, market-based)",
+      value: cr2025.scope2MarketT,
+      pct: (cr2025.scope2MarketT / totalGrossT) * 100,
+      unit: "tCO2e",
+      note: "Low level maintained with renewable electricity",
+    },
+    {
+      metric: "Scope 3 (value chain)",
+      value: cr2025.scope3Kt * 1000,
+      pct: ((cr2025.scope3Kt * 1000) / totalGrossT) * 100,
+      unit: "tCO2e",
+      note: "Upstream and downstream emissions",
+    },
+    {
+      metric: "Gross total",
+      value: totalGrossT,
+      pct: 100,
+      unit: "tCO2e",
+      note: "Before neutralization measures",
+    },
+  ];
+
+  const globalBody = document.getElementById("scopeGlobalTableBody");
+  globalRows.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.metric}</td>
+      <td>${formatK(Math.round(row.value))}</td>
+      <td>${formatPct(row.pct, 2)}</td>
+      <td>${row.unit}</td>
+      <td>${row.note}</td>
+    `;
+    globalBody.appendChild(tr);
+  });
+
+  const scopeDetailsBody = document.getElementById("scopeDetailsTableBody");
+  const scope12Total = cr2025.scope12T;
+
+  const internalRows = [
+    {
+      detail: "Scope 1 within Scope 1+2",
+      tons: cr2025.scope1T,
+      pct: (cr2025.scope1T / scope12Total) * 100,
+      note: "Fleet, natural gas, fugitive emissions",
+    },
+    {
+      detail: "Scope 2 (market-based) within Scope 1+2",
+      tons: cr2025.scope2MarketT,
+      pct: (cr2025.scope2MarketT / scope12Total) * 100,
+      note: "Operational residual with renewable electricity",
+    },
+    {
+      detail: "Scope 2 (location-based, comparison)",
+      tons: cr2025.scope2LocationT,
+      pct: (cr2025.scope2LocationT / scope12Total) * 100,
+      note: "Comparison without market-based accounting",
+    },
+  ];
+
+  cr2025Scope3Parts.forEach((part) => {
+    internalRows.push({
+      detail: `Scope 3 - ${part.label}`,
+      tons: (part.pct / 100) * cr2025.scope3Kt * 1000,
+      pct: part.pct,
+      note: part.note,
+    });
+  });
+
+  internalRows.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.detail}</td>
+      <td>${formatK(Math.round(row.tons))}</td>
+      <td>${formatPct(row.pct, 2)}</td>
+      <td>${row.note}</td>
+    `;
+    scopeDetailsBody.appendChild(tr);
+  });
+
+  const fieldBody = document.getElementById("fieldSplitTableBody");
+  const totalS12Field = cr2025Fields.reduce((sum, f) => sum + f.scope12T, 0);
+  const totalS3Field = cr2025Fields.reduce((sum, f) => sum + f.scope3T, 0);
+
+  cr2025Fields.forEach((f) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${f.name}</td>
+      <td>${formatK(f.scope12T)}</td>
+      <td>${formatPct((f.scope12T / totalS12Field) * 100, 2)}</td>
+      <td>${formatK(f.scope3T)}</td>
+      <td>${formatPct((f.scope3T / totalS3Field) * 100, 2)}</td>
+      <td>${f.profile}</td>
+    `;
+    fieldBody.appendChild(tr);
+  });
+}
+
 function initCharts() {
+  drawRoadmapChart("chartRoadmap", roadmapMilestones);
+
   drawLineChart(
     "chartScopeMarket",
     emissions.years,
@@ -776,6 +1358,14 @@ function initCharts() {
   drawOddMixChart("chartOddMix", projects);
   drawYoYChart("chartYoY");
   drawCarbonIntensityChart("chartCarbonIntensity");
+  drawCr2025OpsChart("chartCr2025Ops");
+  drawCr2025ResidualChart("chartCr2025Residual");
+  drawCr2025SavingsChart("chartCr2025Savings");
+  drawCr2025ScopeShareChart("chartCr2025ScopeShare");
+  drawCr2025OpsShareChart("chartCr2025OpsShare");
+  drawCr2025Scope3PartsChart("chartCr2025Scope3Parts");
+  drawCr2025FieldsChart("chartCr2025FieldsS12", "scope12T", "#e20074");
+  drawCr2025FieldsChart("chartCr2025FieldsS3", "scope3T", "#0b7285");
 }
 
 function unique(arr) {
@@ -791,7 +1381,7 @@ function initFilters() {
     .forEach((v) => {
       const o = document.createElement("option");
       o.value = v;
-      o.textContent = `ODD ${v}`;
+      o.textContent = `SDG ${v}`;
       sdgSel.appendChild(o);
     });
 
@@ -827,7 +1417,7 @@ function renderProjects() {
 
   list.innerHTML = "";
   if (!filtered.length) {
-    list.innerHTML = "<p>Aucun projet ne correspond aux filtres.</p>";
+    list.innerHTML = "<p>No projects match the selected filters.</p>";
     return;
   }
 
@@ -836,7 +1426,7 @@ function renderProjects() {
     card.className = "project-card";
     card.innerHTML = `
       <div class="project-head">
-        <img class="odd-icon" src="${oddIconPath(p.sdg)}" alt="ODD ${p.sdg}" />
+        <img class="odd-icon" src="${oddIconPath(p.sdg)}" alt="SDG ${p.sdg}" />
         <h4>${p.title}</h4>
       </div>
       <div class="meta">${p.odd} • Date: ${p.date}</div>
@@ -850,6 +1440,7 @@ function renderProjects() {
 function init() {
   initKpis();
   initCompany();
+  renderCr2025BreakdownTables();
   renderAdvancedNumbers();
   renderEvolutionTable();
   initScopeTable();
