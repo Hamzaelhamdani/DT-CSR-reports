@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,25 +12,24 @@
       <div class="brand-mark" aria-label="Deutsche Telekom">T</div>
       <div>
         <p class="eyebrow">Deutsche Telekom - Sustainability Intelligence Hub</p>
-        <h1>Landing Page Rapports CSR / CR</h1>
+        <h1>CSR / CR Reports Landing Page</h1>
       </div>
     </div>
     <p class="hero-sub">
-      Vue consolidee des chiffres, graphes emissions, SDGs/ODD et projets avec dates, descriptions et KPIs.
+      Consolidated view of key figures, emissions charts, SDGs, and projects with dates, descriptions, and KPIs.
     </p>
     <div class="hero-tags">
-      <span>Brand color: Telekom Magenta</span>
-      <span>Perimetre: 2009-2025</span>
-      <span>Derniere maj: 2025 CR</span>
+      <span>Coverage: 2009-2025</span>
+      <span>Latest update: 2025 CR</span>
     </div>
     <section class="hero-video" aria-label="Video intro Scale to Sustainability">
       <video controls preload="metadata" poster="" playsinline>
         <source src="./DT__Scale_to_Sustainability.mp4" type="video/mp4" />
-        Votre navigateur ne prend pas en charge la lecture video HTML5.
+        Your browser does not support HTML5 video playback.
       </video>
       <p class="video-note">
         Intro video: DT Scale to Sustainability.
-        <a href="./DT__Scale_to_Sustainability.mp4" download>Télécharger la vidéo</a>
+        <a href="./DT__Scale_to_Sustainability.mp4" download>Download video</a>
       </p>
     </section>
   </header>
@@ -39,12 +38,26 @@
     <section class="kpi-grid" id="kpi-grid"></section>
 
     <section class="panel">
-      <h2>Fiche Entreprise (detaillee)</h2>
+      <h2>Company Profile (Detailed)</h2>
       <div class="company-grid" id="company-grid"></div>
     </section>
 
     <section class="panel">
-      <h2>Emissions - Graphes</h2>
+      <h2>Deutsche Telekom Sustainability Roadmap (Past to Future)</h2>
+      <p class="section-intro">
+        Key milestones from DT's sustainability transformation journey, from the first sustainability report
+        to long-term net-zero and circularity targets.
+      </p>
+      <div class="chart-grid roadmap-grid">
+        <article class="chart-card">
+          <h3>Roadmap Timeline (1996-2040)</h3>
+          <canvas id="chartRoadmap" width="980" height="420"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Emissions - Charts</h2>
       <div class="chart-grid">
         <article class="chart-card">
           <h3>Scope 1 vs Scope 2 (market-based)</h3>
@@ -55,27 +68,27 @@
           <canvas id="chartScopeLocation" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Evolution indexee (base 2020 = 100)</h3>
+          <h3>Indexed evolution (base 2020 = 100)</h3>
           <canvas id="chartIndexed" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Intensite SDG dans les rapports (proxy textuel)</h3>
+          <h3>SDG intensity in reports (text proxy)</h3>
           <canvas id="chartSdgMentions" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Waterfall reduction carbone (2020 vers 2025)</h3>
+          <h3>Carbon reduction waterfall (2020 to 2025)</h3>
           <canvas id="chartWaterfall" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Radar materialite ESG (impact x finance)</h3>
+          <h3>ESG materiality radar (impact x finance)</h3>
           <canvas id="chartRadar" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Progression vers cibles 2030</h3>
+          <h3>Progress toward 2030 targets</h3>
           <canvas id="chartTargets" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Repartition des projets par ODD</h3>
+          <h3>Project distribution by SDG</h3>
           <canvas id="chartOddMix" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
@@ -83,20 +96,143 @@
           <canvas id="chartYoY" width="780" height="360"></canvas>
         </article>
         <article class="chart-card">
-          <h3>Intensite carbone (tCO2e / million EUR)</h3>
+          <h3>Carbon intensity (tCO2e / million EUR)</h3>
           <canvas id="chartCarbonIntensity" width="780" height="360"></canvas>
         </article>
       </div>
     </section>
 
     <section class="panel">
-      <h2>Evolution Chiffree Avancee</h2>
+      <h2>CSR Report 2025 - Carbon Accounting Scopes 1, 2 and 3</h2>
+      <p class="section-intro">
+        This section presents the key figures and visuals from the CR 2025 report for GHG emissions.
+        The data below corresponds to the published tables and charts in the
+        Climate protection section (including Deep Dive for Experts).
+      </p>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>2025 - Scope 1, Scope 2 (market-based), and own operations total</h3>
+          <canvas id="chartCr2025Ops" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>2025 - Residual footprint (ktCO2e): Scope 3 vs Scope 1+2</h3>
+          <canvas id="chartCr2025Residual" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Savings achieved (base year -> 2025)</h3>
+          <canvas id="chartCr2025Savings" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Global split 2025 (% of gross total)</h3>
+          <canvas id="chartCr2025ScopeShare" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Internal split Scope 1+2 (% own operations)</h3>
+          <canvas id="chartCr2025OpsShare" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Scope 3 - sub-categories (2025 estimate in tonnes)</h3>
+          <canvas id="chartCr2025Scope3Parts" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Fields - Scope 1+2 market-based (tonnes)</h3>
+          <canvas id="chartCr2025FieldsS12" width="780" height="360"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Fields - Scope 3 (tonnes)</h3>
+          <canvas id="chartCr2025FieldsS3" width="780" height="360"></canvas>
+        </article>
+      </div>
+
+      <div class="table-wrap section-table-gap">
+        <table>
+          <thead>
+            <tr>
+              <th>GHG Indicator 2025</th>
+              <th>Value</th>
+              <th>Share (%)</th>
+              <th>Unit</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody id="scopeGlobalTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap section-table-gap">
+        <table>
+          <thead>
+            <tr>
+              <th>Internal breakdown</th>
+              <th>Tonnes CO2e</th>
+              <th>Share (%)</th>
+              <th>Observation</th>
+            </tr>
+          </thead>
+          <tbody id="scopeDetailsTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap section-table-gap">
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Scope 1+2 MB (tCO2e)</th>
+              <th>Part Scope 1+2 (%)</th>
+              <th>Scope 3 (tCO2e)</th>
+              <th>Part Scope 3 (%)</th>
+              <th>Emissions profile</th>
+            </tr>
+          </thead>
+          <tbody id="fieldSplitTableBody"></tbody>
+        </table>
+      </div>
+
+      <p class="section-note">
+        Note: the Scope 3 sub-category split and field split are trend-based allocations
+        (latest detailed data available), projected onto the published 2025 Scope 3 total.
+      </p>
+
+      <div class="table-wrap section-table-gap">
+        <table>
+          <thead>
+            <tr>
+              <th>Reference in CR 2025</th>
+              <th>Document area</th>
+              <th>Key elements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Environment > Climate protection</td>
+              <td>Pages 36-44</td>
+              <td>Scope 1+2 pathway, Expected savings, >94% reduction vs 2017, net zero operations</td>
+            </tr>
+            <tr>
+              <td>Deep Dive for Experts (Climate protection)</td>
+              <td>Around pages 39-40</td>
+              <td>Scope 1 / Scope 2 market-based and Scope 2 location-based tables</td>
+            </tr>
+            <tr>
+              <td>GRI / ESRS cross-reference index</td>
+              <td>Around pages 18 and 44</td>
+              <td>GRI 305-1, 305-2, 305-3 references to Scope 1/2/3 sections</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Advanced Numeric Evolution</h2>
       <div class="numbers-grid" id="numbersGrid"></div>
       <div class="table-wrap">
         <table id="evolutionTable">
           <thead>
             <tr>
-              <th>Annee</th>
+              <th>Year</th>
               <th>Scope 1</th>
               <th>YoY S1</th>
               <th>Scope 2 MB</th>
@@ -113,12 +249,12 @@
     </section>
 
     <section class="panel">
-      <h2>Tableau annuel Scopes (2009-2025)</h2>
+      <h2>Annual Scope Table (2009-2025)</h2>
       <div class="table-wrap">
         <table id="scopeTable">
           <thead>
             <tr>
-              <th>Annee</th>
+              <th>Year</th>
               <th>Scope 1 (tCO2e)</th>
               <th>Scope 2 market-based (tCO2e)</th>
               <th>Scope 2 location-based (tCO2e)</th>
@@ -132,24 +268,24 @@
     </section>
 
     <section class="panel">
-      <h2>Telechargement des Rapports (2008-2025)</h2>
+      <h2>Report Downloads (2008-2025)</h2>
       <div id="reportDownloads" class="downloads-grid"></div>
     </section>
 
     <section class="panel">
       <div class="section-head">
-        <h2>Projets par ODD (SDG)</h2>
+        <h2>Projects by SDG</h2>
         <div class="filters">
           <label>
-            ODD
+            SDG
             <select id="filterSdg">
-              <option value="all">Tous</option>
+              <option value="all">All</option>
             </select>
           </label>
           <label>
-            Date
+            Year
             <select id="filterYear">
-              <option value="all">Toutes</option>
+              <option value="all">All</option>
             </select>
           </label>
         </div>
@@ -159,7 +295,7 @@
   </main>
 
   <footer>
-    <p>Dashboard genere localement pour analyse EMBA - Sustainability Strategy.</p>
+    <p>Dashboard generated locally for EMBA Sustainability Strategy analysis.</p>
   </footer>
 
   <script src="script.js"></script>
